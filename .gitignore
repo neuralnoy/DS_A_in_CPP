@@ -1,2 +1,41 @@
-target/
+# Build directories
+build/
+cmake-build-*/
+out/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+compile_commands.json
+
+# Executables
+*.out
+*.exe
+*.app
+
+# Object files
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+
+# macOS
+.DS_Store
+
+# Editor files
+*~
+*.swp
+*.swo
+*.tmp
+
+# VSCode
+.vscode/
+
+# CLion / JetBrains
 .idea/
+

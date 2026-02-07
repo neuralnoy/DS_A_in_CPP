@@ -2,3 +2,8 @@
 // to show the precise order of evaluation given the C++ rules for operator precedence.
 
 // Answer: (y + (2 * (z ++))) < (3 - (w / 5))
+//
+
+int main() {
+  // dummy main for CMake
+}

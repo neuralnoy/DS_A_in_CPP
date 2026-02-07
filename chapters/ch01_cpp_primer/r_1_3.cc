@@ -6,3 +6,7 @@ struct Pair {
   int first;     // first integer
   double second; // second double
 };
+
+int main() {
+  // dummy main for CMake
+}
