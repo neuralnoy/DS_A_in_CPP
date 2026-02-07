@@ -3,23 +3,21 @@
 
 #include <iostream>
 
-bool isMultiple(const long n, const long m) {
+bool IsMultiple(const long &n, const long &m) {
     if (n % m == 0) {
         return true;
-    }
-    else {
+    } else {
         return false;
     }
 }
 
-bool shorterIsMultiple(const long n, const long m) {
-    return n % m == 0;
-}
+bool ShorterIsMultiple(const long &n, const long &m) { return n % m == 0; }
 
 int main() {
-    std::cout << "is multiple of 3 and 5 is: " << isMultiple(3, 5) << std::endl;
-    std::cout << "is multiple of 15 and 5 is: " << isMultiple(15, 5) << std::endl;
-    std::cout << "is multiple of 3 and 5 is: " << shorterIsMultiple(3, 5) << std::endl;
-    std::cout << "is multiple of 15 and 5 is: " << shorterIsMultiple(15, 5) << std::endl;
+    std::cout << "is multiple of 3 and 5 is: " << IsMultiple(3, 5) << "\n";
+    std::cout << "is multiple of 15 and 5 is: " << IsMultiple(15, 5) << "\n";
+    std::cout << "is multiple of 3 and 5 is: " << ShorterIsMultiple(3, 5) << "\n";
+    std::cout << "is multiple of 15 and 5 is: " << ShorterIsMultiple(15, 5) << "\n";
     return 0;
 }
+
