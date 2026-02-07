@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-int LoopSumOfIntegersSmallerThanN(int const &n) {
+int LoopSumOfIntegersSmallerThanN(const int& n) {
     if (n <= 1) return 0; // no positive integers smaller than 1
     int sum = 0;
     for (int i = 1; i < n; i++) {
@@ -11,7 +11,7 @@ int LoopSumOfIntegersSmallerThanN(int const &n) {
     return sum;
 }
 
-int FormulaSumOfIntegersSmallerThanN(int const &n) {
+int FormulaSumOfIntegersSmallerThanN(const int& n) {
     if (n <= 1) return 0;
     return ((n - 1) * n) / 2;
 }

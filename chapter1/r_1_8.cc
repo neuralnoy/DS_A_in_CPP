@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-bool IsMultiple(const long &n, const long &m) {
+bool IsMultiple(const long& n, const long& m) {
     if (n % m == 0) {
         return true;
     } else {
@@ -11,7 +11,7 @@ bool IsMultiple(const long &n, const long &m) {
     }
 }
 
-bool ShorterIsMultiple(const long &n, const long &m) { return n % m == 0; }
+bool ShorterIsMultiple(const long& n, const long& m) { return n % m == 0; }
 
 int main() {
     std::cout << "is multiple of 3 and 5 is: " << IsMultiple(3, 5) << "\n";

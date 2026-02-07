@@ -2,6 +2,7 @@
 #include <vector>
 #include <utility> // for std::pair<int, int>
 
+// First standard approach, without optimization
 std::pair<int, int> FindMinMax(const std::vector<int>& sequence) {
     int size = sequence.size();
     int minimum = sequence[0];
