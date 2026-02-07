@@ -1,7 +1,5 @@
-// R-1.4 What are the contents of string s after executing the following statements.
-// string s ="abc";
-// string t = "cde";
-// s += s + t[1] + s;
+// R-1.4 What are the contents of string s after executing the following
+// statements. string s ="abc"; string t = "cde"; s += s + t[1] + s;
 
 // Answer:
 // "abcabcdabc"
@@ -14,12 +12,10 @@
 #include <string>
 
 void concatStrings() {
-    std::string s = "abc";
-    std::string t = "cde";
-    s += s + t[1] + s;
-    std::cout << s << std::endl;
+  std::string s = "abc";
+  std::string t = "cde";
+  s += s + t[1] + s;
+  std::cout << s << std::endl;
 }
 
-int main() {
-    concatStrings();
-}
+int main() { concatStrings(); }
