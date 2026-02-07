@@ -1,24 +1,12 @@
-// Write a pseudocode description of a method for finding the smallest and
-// largest numbers in an array of integers and compare that to a C++ function
-// that would do the same thing.
-
-// Pseudocode
-//
-// min = max = Sequence[0]
-// for i from 1 to length of Sequence - 1
-//     if Sequence[i] < min then min = Sequence[i]
-//     if Sequence[i] > max then max = Sequence[i]
-//
-// return min and max
-
 #include <iostream>
-#include <utility> // for pair type: std::pair<int, int>
+#include <vector>
+#include <utility> // for std::pair<int, int>
 
-
-std::pair<int, int> findMinMax(const int* sequence, const int size) {
+std::pair<int, int> FindMinMax(const std::vector<int>& sequence) {
+    int size = sequence.size();
     int minimum = sequence[0];
     int maximum = sequence[0];
-    for (int i = 0; i < size; i++) {
+    for (size_t i = 1; i < size; i++) {
         if (sequence[i] < minimum) {
             minimum = sequence[i];
         }
@@ -26,11 +14,61 @@ std::pair<int, int> findMinMax(const int* sequence, const int size) {
             maximum = sequence[i];
         }
     }
-    std::cout << "Minimum number is: " << minimum << std::endl << "Maximum number is: " << maximum << std::endl;
+    return {minimum, maximum};
+}
+
+// Optimized approach which reduces the the constant factor of the complexity, still O(n)
+std::pair<int, int> PairwiseOptimalMinMax(const std::vector<int>& sequence) {
+    int size = sequence.size();
+    int minimum, maximum;
+    int i = 0;
+
+    // Initialize min and max
+    if (size % 2 == 0) {
+        if (sequence[0] < sequence[1]) {
+            minimum = sequence[0];
+            maximum = sequence[1];
+        } else {
+            minimum = sequence[1];
+            maximum = sequence[0];
+        }
+        i = 2;
+    } else {
+        minimum = maximum = sequence[0];
+        i = 1;
+    }
+
+    // Process elements in pairs
+    for (; i < size - 1; i += 2) {
+        int localMin, localMax;
+
+        if (sequence[i] < sequence[i + 1]) {
+            localMin = sequence[i];
+            localMax = sequence[i + 1];
+        } else {
+            localMin = sequence[i + 1];
+            localMax = sequence[i];
+        }
+
+        if (localMin < minimum) {
+            minimum = localMin;
+        }
+        if (localMax > maximum) {
+            maximum = localMax;
+        }
+    }
+
     return {minimum, maximum};
 }
 
 int main() {
-    int const sequence[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-    findMinMax(sequence, 15);
+    const std::vector<int> sequence{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+	std::cout << "Computing with standard approach..." << "\n";
+    auto result = FindMinMax(sequence);
+    std::cout << "Minimum: " << result.first
+              << "\nMaximum: " << result.second << std::endl;
+	std::cout << "Computing with optimized approach..." << "\n";
+	auto result_1 = PairwiseOptimalMinMax(sequence);
+    std::cout << "Minimum: " << result_1.first
+              << "\nMaximum: " << result_1.second << std::endl;
 }
