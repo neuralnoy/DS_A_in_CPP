@@ -8,13 +8,8 @@ long long sumOfOddIntegers(int n) {
     return 0;
   }
 
-  long long sum{0};
-  for (int i = 1; i < n; i++) {
-    if (i % 2 != 0) {
-      sum += i;
-    }
-  }
-  return sum;
+  long long k = n / 2;
+  return k * k;
 }
 
 int main() {
