@@ -9,6 +9,7 @@ however. */
 // 2 → 0010 → power of 2
 // 4 → 0100 → power of 2
 // 8 → 1000 → power of 2
+//
 
 #include <iostream>
 
@@ -25,3 +26,9 @@ int main() {
 
   return 0;
 }
+
+// Explanation:
+// (i - 1) flips all the bits after the rightmost 1 in i.
+// If i is a power of 2, i & (i - 1) will be zero.
+// i > 0 avoids the case where i = 0, which would also pass the bitwise check
+// otherwise.
