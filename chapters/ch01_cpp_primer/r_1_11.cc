@@ -5,24 +5,25 @@ that initializes each variable to an appropriate value, and your class should
 include functions for setting the value of each type, and getting the value
 of each type.*/
 
+#include <iomanip> // for std::setprecision
 #include <iostream>
 #include <string>
 
 class Flower {
 public:
-  // constructor
-  Flower(std::string name, int petals, float price)
+  // Constructor with member initializer list
+  Flower(const std::string &name = "Rose", int petals = 20, float price = 2.99f)
       : name_(name), petals_(petals), price_(price) {}
 
-  // getter methods
-  std::string getName();
-  int getPetals();
-  float getPrice();
+  // Getters (marked const, efficient)
+  std::string getName() const { return name_; }
+  int getPetals() const { return petals_; }
+  float getPrice() const { return price_; }
 
-  // setter methods
-  void setName(std::string new_name);
-  void setPetals(int num_petals);
-  void setPrice(float new_price);
+  // Setters
+  void setName(const std::string &new_name) { name_ = new_name; }
+  void setPetals(int num_petals) { petals_ = num_petals; }
+  void setPrice(float new_price) { price_ = new_price; }
 
 private:
   std::string name_;
@@ -30,36 +31,33 @@ private:
   float price_;
 };
 
-// getters
-std::string Flower::getName() { return name_; }
-int Flower::getPetals() { return petals_; }
-float Flower::getPrice() { return price_; }
-
-// setters
-void Flower::setName(std::string new_name) { name_ = new_name; }
-void Flower::setPetals(int num_petals) { petals_ = num_petals; }
-void Flower::setPrice(float new_price) { price_ = new_price; }
-
 int main() {
-  // Create a Flower object using the constructor
-  Flower rose("Rose", 20, 2.99);
+  // Create a flower using the default constructor
+  Flower flower1;
+  std::cout << "Default flower:\n";
+  std::cout << "Name: " << flower1.getName() << "\n";
+  std::cout << "Petals: " << flower1.getPetals() << "\n";
+  std::cout << "Price: $" << std::fixed << std::setprecision(2)
+            << flower1.getPrice() << "\n\n";
 
-  // Print initial values using getters
-  std::cout << "Initial flower details:\n";
-  std::cout << "Name: " << rose.getName() << "\n";
-  std::cout << "Petals: " << rose.getPetals() << "\n";
-  std::cout << "Price: $" << rose.getPrice() << "\n\n";
+  // Create a flower with custom values
+  Flower flower2("Tulip", 15, 3.49f);
+  std::cout << "Custom flower:\n";
+  std::cout << "Name: " << flower2.getName() << "\n";
+  std::cout << "Petals: " << flower2.getPetals() << "\n";
+  std::cout << "Price: $" << std::fixed << std::setprecision(2)
+            << flower2.getPrice() << "\n\n";
 
-  // Modify values using setters
-  rose.setName("Tulip");
-  rose.setPetals(15);
-  rose.setPrice(3.49f);
+  // Modify flower2 using setters
+  flower2.setName("Sunflower");
+  flower2.setPetals(30);
+  flower2.setPrice(5.25f);
 
-  // Print updated values
-  std::cout << "Updated flower details:\n";
-  std::cout << "Name: " << rose.getName() << "\n";
-  std::cout << "Petals: " << rose.getPetals() << "\n";
-  std::cout << "Price: $" << rose.getPrice() << "\n";
+  std::cout << "Updated flower2:\n";
+  std::cout << "Name: " << flower2.getName() << "\n";
+  std::cout << "Petals: " << flower2.getPetals() << "\n";
+  std::cout << "Price: $" << std::fixed << std::setprecision(2)
+            << flower2.getPrice() << "\n";
 
   return 0;
 }
