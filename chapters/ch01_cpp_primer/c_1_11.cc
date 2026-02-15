@@ -15,3 +15,8 @@ For example, for n = 80,844 and m = 25,320, the sequence is as follows:
 120 mod 12= 0
 So, GCD of 80,844 and 25,320 is 12. Write a short C++ function to
 compute GCD(n,m) for two integers n and m. */
+
+int main() {
+  // dummy
+  return 0;
+}

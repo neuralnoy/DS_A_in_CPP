@@ -4,3 +4,8 @@
 // vectors (producing a vector result), the multiplication of a scalar times
 // a vector (producing a vector result), and the dot product of two vectors
 // (producing a double result).
+
+int main() {
+  // dummy
+  return 0;
+}
