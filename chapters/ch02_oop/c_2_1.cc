@@ -1,11 +1,8 @@
 #include <iostream>
-#include <string>
-
 int main() {
-  std::string s = "#include <iostream>\n#include <string>\n\nint main() {\n    "
-                  "std::string s = ";
-  std::string t = ";\n    std::cout << s << \"\\\"\" << s << \"\\\"\" << t << "
-                  "std::endl;\n    return 0;\n}";
-  std::cout << s << "\"" << s << "\"" << t << std::endl;
+  const char *s =
+      "#include <iostream>%cint main() {%c    const char *s = %c%s%c;%c    "
+      "printf(s, 10, 10, 34, s, 34, 10, 10);%c    return 0;%c}";
+  printf(s, 10, 10, 34, s, 34, 10, 10);
   return 0;
 }
