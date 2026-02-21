@@ -19,7 +19,7 @@ int CountVowels(const std::string &str) {
 int main() {
   std::string text =
       "ThisIsAwordwhichcontainsprobabySeveralvowelsUniqueOrnotWhoknowsWhat";
-  int totalVowels = CountVowels(text);
-  std::cout << "Total number of vowels: " << totalVowels << "\n";
+  int total_vowels = CountVowels(text);
+  std::cout << "Total number of vowels: " << total_vowels << "\n";
   return 0;
 }
