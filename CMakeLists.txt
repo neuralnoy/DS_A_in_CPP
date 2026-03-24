@@ -6,3 +6,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_subdirectory(chapters/ch01_cpp_primer)
 add_subdirectory(chapters/ch02_oop)
+add_subdirectory(chapters/ch03_arr_lst_recursion)
