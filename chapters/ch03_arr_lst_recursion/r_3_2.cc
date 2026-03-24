@@ -3,6 +3,13 @@
 // in the same relative order in the final sorted order or in reverse order?
 // Explain your answer.
 
+// Answer:
+//  In insertion sort, equal elements remain in the same relative order after
+//  sorting. This is because the algorithm only shifts elements that are
+//  strictly greater than the current element (key). If two elements are equal,
+//  no shifting occurs, so the later element is inserted after the earlier one.
+//  Therefore, insertion sort is a stable sorting algorithm.
+
 #include <iostream>
 
 void InsertionSort(double *A, int n) {
