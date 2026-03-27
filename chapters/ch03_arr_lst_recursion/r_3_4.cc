@@ -47,10 +47,6 @@ int main() {
   matrix[0] = new int[n]{1, 2, 3};
   matrix[1] = new int[n]{4, 5, 6};
   matrix[2] = new int[n]{7, 8, 9};
-  for (int i = 1; i < n; i++) {
-    // Copy initialization values for simplicity
-    // In practice, fill each row as needed
-  }
 
   cout << "Sum of elements: " << sum2D(matrix, n - 1, n - 1, n) << endl;
 
