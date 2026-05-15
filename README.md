@@ -16,4 +16,7 @@ cmake .. # make
 cmake --build . # and build -> find executables in the build directory
 ```
 
-
+```bash
+# to generate compile_commands.json in build directory
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -B build
+```
