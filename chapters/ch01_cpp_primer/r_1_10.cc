@@ -18,5 +18,5 @@ void g(int& x)
 // call.
 
 int main() {
-  // dummy main for Cmake
+    // dummy main for Cmake
 }

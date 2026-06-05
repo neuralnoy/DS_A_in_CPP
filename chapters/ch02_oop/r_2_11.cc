@@ -24,6 +24,6 @@
 // but not siblings.
 
 int main() {
-  // dummy main
-  return 0;
+    // dummy main
+    return 0;
 }

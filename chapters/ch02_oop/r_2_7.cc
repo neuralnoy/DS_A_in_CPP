@@ -30,6 +30,6 @@
 // base during destruction.
 
 int main() {
-  // dummy main
-  return 0;
+    // dummy main
+    return 0;
 }

@@ -133,6 +133,6 @@
 // in the hierarchy.
 
 int main() {
-  // dummy main
-  return 0;
+    // dummy main
+    return 0;
 }

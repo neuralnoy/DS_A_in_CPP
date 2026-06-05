@@ -16,15 +16,14 @@ however. */
 bool isTwoPower(int i) { return i > 0 && (i & (i - 1)) == 0; }
 
 int main() {
-  int testValues[] = {0, 1, 2, 3, 4, 5, 8, 16, 31, 32, 33, 64, 127, 128};
+    int testValues[] = {0, 1, 2, 3, 4, 5, 8, 16, 31, 32, 33, 64, 127, 128};
 
-  for (int val : testValues) {
-    std::cout << val << " is "
-              << (isTwoPower(val) ? "a power of 2" : "not a power of 2")
-              << "\n";
-  }
+    for (int val : testValues) {
+        std::cout << val << " is " << (isTwoPower(val) ? "a power of 2" : "not a power of 2")
+                  << "\n";
+    }
 
-  return 0;
+    return 0;
 }
 
 // Explanation:

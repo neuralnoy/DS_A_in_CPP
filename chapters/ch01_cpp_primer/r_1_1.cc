@@ -24,5 +24,5 @@
 //  but the name is technically valid.
 
 int main() {
-  // dummy main for CMake
+    // dummy main for CMake
 }

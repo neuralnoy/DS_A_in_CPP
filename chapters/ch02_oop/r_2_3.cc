@@ -5,6 +5,6 @@
 // 3. Car autopiloting software
 
 int main() {
-  // dummy main
-  return 0;
+    // dummy main
+    return 0;
 }

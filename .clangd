@@ -1,4 +1,6 @@
 CompileFlags:
+    # Tell clangd where to find compile_commands.json
+    CompilationDatabase: "build"
     Add: [-std=c++20, -Wall, -Wextra]
 Documentation:
     CommentFormat: Doxygen

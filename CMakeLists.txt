@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 project(DS_A_in_CPP)
 
+# Automatically generate compile_commands.json in the build directory
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 

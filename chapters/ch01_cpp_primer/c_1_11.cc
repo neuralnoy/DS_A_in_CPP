@@ -17,6 +17,6 @@ So, GCD of 80,844 and 25,320 is 12. Write a short C++ function to
 compute GCD(n,m) for two integers n and m. */
 
 int main() {
-  // dummy
-  return 0;
+    // dummy
+    return 0;
 }

@@ -29,6 +29,6 @@
 // This is not runtime efficiency but still a practical performance concern.
 
 int main() {
-  // dummy main for the Cmake
-  return 0;
+    // dummy main for the Cmake
+    return 0;
 }

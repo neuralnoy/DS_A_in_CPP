@@ -36,6 +36,6 @@
 // Assuming the starting value is 1.
 
 int main() {
-  // dummy main
-  return 0;
+    // dummy main
+    return 0;
 }

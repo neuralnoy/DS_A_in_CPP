@@ -4,21 +4,20 @@
 
 #include <iostream>
 
-bool IsMultiple(const long &n, const long &m) {
-  if (n % m == 0) {
-    return true;
-  } else {
-    return false;
-  }
+bool IsMultiple(const long& n, const long& m) {
+    if (n % m == 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-bool ShorterIsMultiple(const long &n, const long &m) { return n % m == 0; }
+bool ShorterIsMultiple(const long& n, const long& m) { return n % m == 0; }
 
 int main() {
-  std::cout << "is multiple of 3 and 5 is: " << IsMultiple(3, 5) << "\n";
-  std::cout << "is multiple of 15 and 5 is: " << IsMultiple(15, 5) << "\n";
-  std::cout << "is multiple of 3 and 5 is: " << ShorterIsMultiple(3, 5) << "\n";
-  std::cout << "is multiple of 15 and 5 is: " << ShorterIsMultiple(15, 5)
-            << "\n";
-  return 0;
+    std::cout << "is multiple of 3 and 5 is: " << IsMultiple(3, 5) << "\n";
+    std::cout << "is multiple of 15 and 5 is: " << IsMultiple(15, 5) << "\n";
+    std::cout << "is multiple of 3 and 5 is: " << ShorterIsMultiple(3, 5) << "\n";
+    std::cout << "is multiple of 15 and 5 is: " << ShorterIsMultiple(15, 5) << "\n";
+    return 0;
 }

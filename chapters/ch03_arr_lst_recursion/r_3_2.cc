@@ -12,25 +12,24 @@
 
 #include <iostream>
 
-void InsertionSort(double *A, int n) {
-  for (int i = 1; i < n; i++) {
-    double cur = A[i];
-    int j = i - 1;
+void InsertionSort(double* A, int n) {
+    for (int i = 1; i < n; i++) {
+        double cur = A[i];
+        int j = i - 1;
 
-    while (j >= 0 && A[j] > cur) {
-      A[j + 1] = A[j];
-      j--;
+        while (j >= 0 && A[j] > cur) {
+            A[j + 1] = A[j];
+            j--;
+        }
+
+        A[j + 1] = cur;
     }
-
-    A[j + 1] = cur;
-  }
 }
 
 int main() {
-  double someArrayOfDoubles[] = {1.0, 5.4, 3.2, 3.2, 5.5, 1000.3, 0.2, 0.0001};
+    double someArrayOfDoubles[] = {1.0, 5.4, 3.2, 3.2, 5.5, 1000.3, 0.2, 0.0001};
 
-  InsertionSort(someArrayOfDoubles, 8);
+    InsertionSort(someArrayOfDoubles, 8);
 
-  for (double x : someArrayOfDoubles)
-    std::cout << x << " ";
+    for (double x : someArrayOfDoubles) std::cout << x << " ";
 }

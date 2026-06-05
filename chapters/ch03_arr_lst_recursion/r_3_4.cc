@@ -25,35 +25,34 @@ using namespace std;
 
 // Recursive function to sum all elements of an n × n array using row and column
 // indices
-int sum2D(int **matrix, int row, int col, int n) {
-  // Base case: first element
-  if (row == 0 && col == 0) {
-    return matrix[0][0];
-  }
+int sum2D(int** matrix, int row, int col, int n) {
+    // Base case: first element
+    if (row == 0 && col == 0) {
+        return matrix[0][0];
+    }
 
-  // Recursive case
-  if (col > 0) {
-    return matrix[row][col] + sum2D(matrix, row, col - 1, n);
-  } else {
-    return matrix[row][col] + sum2D(matrix, row - 1, n - 1, n);
-  }
+    // Recursive case
+    if (col > 0) {
+        return matrix[row][col] + sum2D(matrix, row, col - 1, n);
+    } else {
+        return matrix[row][col] + sum2D(matrix, row - 1, n - 1, n);
+    }
 }
 
 int main() {
-  int n = 3;
+    int n = 3;
 
-  // Allocate 2D array dynamically
-  int **matrix = new int *[n];
-  matrix[0] = new int[n]{1, 2, 3};
-  matrix[1] = new int[n]{4, 5, 6};
-  matrix[2] = new int[n]{7, 8, 9};
+    // Allocate 2D array dynamically
+    int** matrix = new int*[n];
+    matrix[0] = new int[n]{1, 2, 3};
+    matrix[1] = new int[n]{4, 5, 6};
+    matrix[2] = new int[n]{7, 8, 9};
 
-  cout << "Sum of elements: " << sum2D(matrix, n - 1, n - 1, n) << endl;
+    cout << "Sum of elements: " << sum2D(matrix, n - 1, n - 1, n) << endl;
 
-  // Clean up
-  for (int i = 0; i < n; i++)
-    delete[] matrix[i];
-  delete[] matrix;
+    // Clean up
+    for (int i = 0; i < n; i++) delete[] matrix[i];
+    delete[] matrix;
 
-  return 0;
+    return 0;
 }
