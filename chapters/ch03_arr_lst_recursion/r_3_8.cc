@@ -26,20 +26,20 @@ class Node {
 // Constructor
 // Destructor
 // Method empty() to check if the list is empty or not
-// Method getFront() to get the Node from the front
-// Method getBack() to get the Node from the back
-// Method pushFront() to put new Node in the front
-// Method pushBack() to put new Node in the back
-// Method removeFront() to remove the Node from the front
-// Method removeBack() to remove the Node from the back
+// Method getFront() to get the element from the front
+// Method getBack() to get the element from the back
+// Method pushFront() to insert a new element at the front
+// Method pushBack() to insert a new element at the back
+// Method removeFront() to remove the element at the front
+// Method removeBack() to remove the element at the back
 //
 // Private members:
 // pointer for the head (private)
-// pointer for the trail (private)
+// pointer for the trail/tail (private)
 //
 // Protected members:
-// Method add() to insert new node before a node "v"
-// Methode remove() to remove a node "v"
+// Method add() to insert a new element before a node "v"
+// Method remove() to remove a node "v"
 
 // Skeleton of the class
 template <typename T>
@@ -48,19 +48,19 @@ class DoublyLinkedList {
     DoublyLinkedList<T>();          // Constructor
     ~DoublyLinkedList<T>();         // Destructor
     bool empty() const;             // Is list empty?
-    const T& getFront();            // Get the Node from the front
-    const T& getBack();             // Get the Node from the back
-    void pushFront(const T& data);  // Put new Node in the front
-    void pushBack(const T& data);   // Put new Node in the back
-    void removeFront();             // Remove the Node from the front
-    void removeBack();              // Remove the Node from the back
+    const T& getFront();            // Get the element from the front
+    const T& getBack();             // Get the element from the back
+    void pushFront(const T& data);  // Insert a new element at the front
+    void pushBack(const T& data);   // Insert a new element at the back
+    void removeFront();             // Remove the element from the front
+    void removeBack();              // Remove the element from the back
 
    private:
     Node<T>* head;   // Reference pointer to the head
     Node<T>* trail;  // Reference pointer to the tail
 
    protected:
-    void add(Node<T>* v, const T& elem);  // Add a new Node element before the Node v
+    void add(Node<T>* v, const T& elem);  // Add a new element before the Node v
     void remove(Node<T>* v);              // Remove the Node v
 };
 
