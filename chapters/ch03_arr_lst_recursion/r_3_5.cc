@@ -1,6 +1,5 @@
 // Give a recursive definition of a singly linked list.
 
-
 // A **singly linked list** can be defined **recursively** by specifying a
 // base case and a recursive case.
 //
