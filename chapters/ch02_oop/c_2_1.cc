@@ -1,3 +1,5 @@
+#include <cstdio>  // to use printf
+
 int main() {
     const char* s =
         "#include <iostream>%cint main() {%c    const char *s = %c%s%c;%c    "
