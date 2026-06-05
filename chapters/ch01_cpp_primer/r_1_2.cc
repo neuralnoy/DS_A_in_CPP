@@ -7,7 +7,7 @@ std::pair<int, int> FindMinMax(const std::vector<int>& sequence) {
     int size = sequence.size();
     int minimum = sequence[0];
     int maximum = sequence[0];
-    for (size_t i = 1; i < size; i++) {
+    for (int i = 1; i < size; i++) {
         if (sequence[i] < minimum) {
             minimum = sequence[i];
         }
