@@ -1,10 +1,8 @@
 // Give a fully generic implementation of the doubly linked list data structure
 // of a Section of the book by using a templated class.
-
-// Forward declaration of the doubly linked list
-template <typename T>
-class DoublyLinkedList;
-
+//
+// ---PLAN---
+//
 // Individual Node of the doubly linked list
 // It has:
 // An element
@@ -12,15 +10,7 @@ class DoublyLinkedList;
 // pointer to the previous Node
 // and its internals should be available for the friend (overarching) class of
 // the DoublyLinkedList
-
-template <typename T>
-class Node {
-    T element;
-    Node* next;
-    Node* previous;
-    friend class DoublyLinkedList<T>;
-};
-
+//
 // Overarching Doubly Linked List
 // It has public members:
 // Constructor
@@ -41,7 +31,20 @@ class Node {
 // Method add() to insert a new element before a node "v"
 // Method remove() to remove a node "v"
 
-// Skeleton of the class
+// Forward declaration of the doubly linked list
+template <typename T>
+class DoublyLinkedList;
+
+// Template class for Node object
+template <typename T>
+class Node {
+    T element;
+    Node* next;
+    Node* previous;
+    friend class DoublyLinkedList<T>;
+};
+
+// Skeleton of the template class of Doubly Linked List
 template <typename T>
 class DoublyLinkedList {
    public:
@@ -64,8 +67,7 @@ class DoublyLinkedList {
     void remove(Node<T>* v);              // Remove the Node v
 };
 
-// Implementation of methods for Doubly Linked List
-
+// Implementation of methods for Doubly Linked List Template Class
 template <typename T>
 DoublyLinkedList<T>::DoublyLinkedList() {
     head = new Node<T>;
