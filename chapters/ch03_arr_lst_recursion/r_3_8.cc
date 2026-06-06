@@ -31,6 +31,8 @@
 // Method add() to insert a new element before a node "v"
 // Method remove() to remove a node "v"
 
+#include <stdexcept>
+
 // Forward declaration of the doubly linked list
 template <typename T>
 class DoublyLinkedList;
@@ -51,8 +53,8 @@ class DoublyLinkedList {
     DoublyLinkedList<T>();          // Constructor
     ~DoublyLinkedList<T>();         // Destructor
     bool empty() const;             // Is list empty?
-    const T& getFront();            // Get the element from the front
-    const T& getBack();             // Get the element from the back
+    const T& getFront() const;      // Get the element from the front
+    const T& getBack() const;       // Get the element from the back
     void pushFront(const T& data);  // Insert a new element at the front
     void pushBack(const T& data);   // Insert a new element at the back
     void removeFront();             // Remove the element from the front
@@ -88,6 +90,22 @@ DoublyLinkedList<T>::~DoublyLinkedList() {
 template <typename T>
 bool DoublyLinkedList<T>::empty() const {
     return (head->next == trail);
+}
+
+template <typename T>
+const T& DoublyLinkedList<T>::getFront() const {
+    if (!empty()) {
+        return DoublyLinkedList<T>::head->next->element;
+    }
+    throw std::underflow_error("List is empty!");
+}
+
+template <typename T>
+const T& DoublyLinkedList<T>::getBack() const {
+    if (!empty()) {
+        return DoublyLinkedList<T>::trail->previous->element;
+    }
+    throw std::underflow_error("List is empty!");
 }
 
 int main() { return 0; }
