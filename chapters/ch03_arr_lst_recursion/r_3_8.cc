@@ -35,7 +35,7 @@ class Node {
 //
 // Private members:
 // pointer for the head (private)
-// pointer for the trail (private)
+// pointer for the trail/tail (private)
 //
 // Protected members:
 // Method add() to insert a new element before a node "v"
