@@ -66,4 +66,26 @@ class DoublyLinkedList {
 
 // Implementation of methods for Doubly Linked List
 
+template <typename T>
+DoublyLinkedList<T>::DoublyLinkedList() {
+    head = new Node<T>;
+    trail = new Node<T>;
+    head->previous = nullptr;
+    head->next = trail;
+    trail->previous = head;
+    trail->next = nullptr;
+}
+
+template <typename T>
+DoublyLinkedList<T>::~DoublyLinkedList() {
+    while (!empty()) removeFront();
+    delete head;
+    delete trail;
+}
+
+template <typename T>
+bool DoublyLinkedList<T>::empty() const {
+    return (head->next == trail);
+}
+
 int main() { return 0; }
