@@ -20,8 +20,8 @@ class Node {
 template <typename T>
 class DoublyLinkedList {
    public:
-    DoublyLinkedList<T>();          // Constructor
-    ~DoublyLinkedList<T>();         // Destructor
+    DoublyLinkedList();             // Constructor
+    ~DoublyLinkedList();            // Destructor
     bool empty() const;             // Is list empty?
     const T& getFront() const;      // Get the element from the front
     const T& getBack() const;       // Get the element from the back
