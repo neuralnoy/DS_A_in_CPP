@@ -1,35 +1,5 @@
 // Give a fully generic implementation of the doubly linked list data structure
 // of a Section of the book by using a templated class.
-//
-// ---PLAN---
-//
-// Individual Node of the doubly linked list
-// It has:
-// An element
-// pointer to the next Node
-// pointer to the previous Node
-// and its internals should be available for the friend (overarching) class of
-// the DoublyLinkedList
-//
-// Overarching Doubly Linked List
-// It has public members:
-// Constructor
-// Destructor
-// Method empty() to check if the list is empty or not
-// Method getFront() to get the element from the front
-// Method getBack() to get the element from the back
-// Method pushFront() to insert a new element at the front
-// Method pushBack() to insert a new element at the back
-// Method removeFront() to remove the element at the front
-// Method removeBack() to remove the element at the back
-//
-// Private members:
-// pointer for the head (private)
-// pointer for the trail/tail (private)
-//
-// Protected members:
-// Method add() to insert a new element before a node "v"
-// Method remove() to remove a node "v"
 
 #include <stdexcept>
 
