@@ -79,6 +79,14 @@ const T& DoublyLinkedList<T>::getBack() const {
 }
 
 template <typename T>
-void DoublyLinkedList<T>::add(Node<T>* v, const T& elem) {}
+void DoublyLinkedList<T>::add(Node<T>* v, const T& elem) {
+    auto u = new Node<T>;
+    Node<T>* w = v->previous;
+    u->previous = w;
+    w->next = u;
+    v->previous = u;
+    u->next = v;
+    u->element = elem;
+}
 
 int main() { return 0; }
