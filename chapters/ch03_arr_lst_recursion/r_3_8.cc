@@ -89,4 +89,43 @@ void DoublyLinkedList<T>::add(Node<T>* v, const T& elem) {
     u->element = elem;
 }
 
+template <typename T>
+void DoublyLinkedList<T>::remove(Node<T>* v) {
+    Node<T>* u = v->previous;
+    Node<T>* w = v->next;
+    u->next = w;
+    w->previous = u;
+    delete v;
+}
+
+template <typename T>
+void DoublyLinkedList<T>::pushFront(const T& data) {
+    auto v = head->next;
+    add(v, data);
+}
+
+template <typename T>
+void DoublyLinkedList<T>::pushBack(const T& data) {
+    auto v = trail;
+    add(v, data);
+}
+
+template <typename T>
+void DoublyLinkedList<T>::removeFront() {
+    if (empty()) {
+        throw std::underflow_error("The list is already empty");
+    } else {
+        remove(head->next);
+    }
+}
+
+template <typename T>
+void DoublyLinkedList<T>::removeBack() {
+    if (empty()) {
+        throw std::underflow_error("The list is already empty");
+    } else {
+        remove(trail->previous);
+    }
+}
+
 int main() { return 0; }
