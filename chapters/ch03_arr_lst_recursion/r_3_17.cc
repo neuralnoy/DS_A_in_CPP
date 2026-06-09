@@ -101,45 +101,65 @@ void CircleList<T>::remove() {
     delete old;
 }
 
+template <typename T>
+int CircleList<T>::countNumberNodes() {
+    if (empty()) return 0;
+    int counter = 1;
+    Node<T>* curr = cursor->next;
+    while (curr != cursor) {
+        counter++;
+        curr = curr->next;
+    }
+    return counter;
+}
+
 int main() {
     CircleList<int> list;
 
     // Test initially empty
     assert(list.empty() == true);
+    assert(list.countNumberNodes() == 0);
 
     // Test adding first element
     list.add(10);
     assert(list.empty() == false);
     assert(list.front() == 10);
     assert(list.back() == 10);
+    assert(list.countNumberNodes() == 1);
 
     // Test adding another element (adds after cursor, so becomes front)
     list.add(20);
     assert(list.front() == 20);
     assert(list.back() == 10);
+    assert(list.countNumberNodes() == 2);
 
     // Test advance
     list.advance();  // cursor moves to 20. Back becomes 20, front becomes 10
     assert(list.front() == 10);
     assert(list.back() == 20);
+    assert(list.countNumberNodes() == 2);
 
     // Add another element
     list.add(30);  // added after cursor (20). Front becomes 30.
     assert(list.front() == 30);
     assert(list.back() == 20);
+    assert(list.countNumberNodes() == 3);
 
     // Test remove (removes front element, which is 30)
     list.remove();
     assert(list.front() == 10);
     assert(list.back() == 20);
+    assert(list.countNumberNodes() == 2);
 
     // Remove remaining elements
     list.remove();
     assert(list.front() == 20);
     assert(list.back() == 20);
+    assert(list.countNumberNodes() == 1);
 
     list.remove();
     assert(list.empty() == true);
+    assert(list.countNumberNodes() == 0);
 
     // Test exceptions
     bool exception_thrown = false;
