@@ -32,10 +32,3 @@ compile_commands.json
 *.swp
 *.swo
 *.tmp
-
-# VSCode
-.vscode/
-
-# CLion / JetBrains
-.idea/
-
