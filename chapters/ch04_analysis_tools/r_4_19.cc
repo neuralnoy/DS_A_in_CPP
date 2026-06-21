@@ -12,5 +12,7 @@
 // return t
 //
 // Solution:
+// Assuming basic operations like assignment and addition take O(1) time, the
+// single loop runs exactly n - 1 times. Thus, the algorithm runs in O(n) time.
 
 int main() { return 0; }
