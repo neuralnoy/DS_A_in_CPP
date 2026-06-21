@@ -7,8 +7,10 @@
 // s ← A[0]
 // t ← s
 // for i ← 1 to n−1 do
-// s ← s + A[i]
-// t ← t + s
+//   s ← s + A[i]
+//   t ← t + s
 // return t
+//
+// Solution:
 
 int main() { return 0; }
