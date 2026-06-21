@@ -14,5 +14,10 @@
 //   if B[i] = s then
 //     c ← c + 1
 // return c
-
+//
+// Solution:
+// The algorithm has three nested loops, each running at most n times.
+// Since all other operations are primitive and execute in O(1) time,
+// the overall worst-case running time of the algorithm is O(n^3).
+//
 int main() { return 0; }
