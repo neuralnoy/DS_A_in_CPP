@@ -6,13 +6,13 @@
 // Output: The number of elements in B equal to the sum of prefix sums in A.
 // c ← 0
 // for i ← 0 to n−1 do
-// s ← 0
-// for j ← 0 to n−1 do
-// s ← s + A[0]
-// for k ← 1 to j do
-// s ← s + A[k]
-// if B[i] = s then
-// c ← c + 1
+//   s ← 0
+//   for j ← 0 to n−1 do
+//     s ← s + A[0]
+//     for k ← 1 to j do
+//       s ← s + A[k]
+//   if B[i] = s then
+//     c ← c + 1
 // return c
 
 int main() { return 0; }
