@@ -4,7 +4,7 @@
 #include <iostream>
 #include <utility>
 
-void revertArray(std::array<int, 16>& some_arr) {
+void RevertArray(std::array<int, 16>& some_arr) {
     size_t j = some_arr.size() - 1;
     for (size_t i = 0; i < j; i++) {
         std::swap(some_arr[i], some_arr[j]);
@@ -21,7 +21,7 @@ int main() {
     }
     std::cout << "\n\n";
 
-    revertArray(arr);
+    RevertArray(arr);
 
     std::cout << "Reversed array:\n";
     for (int val : arr) {
