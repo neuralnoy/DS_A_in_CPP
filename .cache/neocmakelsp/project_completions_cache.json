@@ -1,0 +1,25 @@
+{
+  "date": "2026-08-05T21:30:06.456428+02:00",
+  "data": {
+    "/Users/arstep/Projects/DS_A_in_CPP/CMakeLists.txt": [
+      {
+        "label": "CMAKE_EXPORT_COMPILE_COMMANDS",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: /Users/arstep/Projects/DS_A_in_CPP/CMakeLists.txt\n\nAutomatically generate compile_commands.json in the build directory"
+      },
+      {
+        "label": "CMAKE_CXX_STANDARD",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: /Users/arstep/Projects/DS_A_in_CPP/CMakeLists.txt"
+      },
+      {
+        "label": "CMAKE_CXX_STANDARD_REQUIRED",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: /Users/arstep/Projects/DS_A_in_CPP/CMakeLists.txt"
+      }
+    ]
+  }
+}
